@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Site Pessoal</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('quem-sou-eu')">Quem sou eu?</a></li>
+                <li><a href="#" onclick="showSection('minha-formacao')">Minha formação</a></li>
+                <li><a href="#" onclick="showSection('portfolio')">Portfolio</a></li>
+                <li><a href="#" onclick="showSection('contato')">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="quem-sou-eu">
+            <h2>Quem sou eu?</h2>
+            <p>Insira aqui uma descrição sobre você. Fale sobre suas paixões, hobbies e o que te motiva.</p>
+        </section>
+
+        <section id="minha-formacao">
+            <h2>Minha formação</h2>
+            <p>Insira aqui as informações sobre sua formação acadêmica, cursos, e qualquer outra experiência educacional.</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Insira aqui exemplos de trabalhos ou projetos que você realizou. Adicione links, imagens, e descrições dos seus projetos.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Insira aqui suas informações de contato, como e-mail, telefone, ou links para suas redes sociais.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meu Site Pessoal</p>
+    </footer>
+
+    <script>
+        // Função para mostrar apenas a seção correspondente ao link clicado
+        function showSection(sectionId) {
+            // Oculta todas as seções
+            var sections = document.querySelectorAll('main section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Mostra a seção selecionada
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Exibe inicialmente a primeira seção
+        showSection('quem-sou-eu');
+    </script>
+</body>
+</html>
